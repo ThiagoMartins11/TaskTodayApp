@@ -1,4 +1,4 @@
-package com.example.tasktoday.ui.theme
+package com.example.tasktodayapp.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

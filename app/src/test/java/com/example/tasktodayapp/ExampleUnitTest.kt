@@ -1,4 +1,4 @@
-package com.example.tasktoday
+package com.example.tasktodayapp
 
 import org.junit.Test
 

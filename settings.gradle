@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "TaskToday"
+rootProject.name = "TaskTodayApp"
 include ':app'
