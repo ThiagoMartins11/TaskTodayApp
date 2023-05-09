@@ -64,20 +64,20 @@ fun MainScreenContent() {
                         Icon(
                             imageVector = Icons.Default.Menu,
                             contentDescription = "Drawer Menu",
-                            tint = Color(0xFF99ff66),
+                            tint = Color(0xFF000000),
 
                             )
                     }
                 },
 
-                backgroundColor = Color(0xFF0099ff ),
+                backgroundColor = Color(0xFFac3939),
 
                 )
 
 
         },
 
-        drawerBackgroundColor = Color(0xFFffffb3),
+        drawerBackgroundColor = Color(0xFFac3939),
         drawerGesturesEnabled = scaffoldState.drawerState.isOpen,
 
         drawerContent = {
@@ -102,7 +102,7 @@ fun MainScreenContent() {
                 paddingValues -> Log.i("paddinVales", "$paddingValues")
             Column(
                 modifier = Modifier
-                    .background(Color(0xFFccebff ))
+                    .background(Color(0xFFfffff ))
                     .fillMaxSize()
             ) {
                 MySearchField(modificador = Modifier.fillMaxWidth())
@@ -116,28 +116,28 @@ fun MainScreenContent() {
                     Date(),
                     Date(),
                     status = 0.0,
-                    "#d9ffb3"
+                    "#ff6666"
                 )
 
-                val tProvaDeKotlin = Tarefa(
-                    "Estudar prova de Kotlin",
-                    "Cap 2 do livro xz",
+                val tPassearcomcachorro = Tarefa(
+                    "ir passear com o cachorro no parque",
+                    "as 10:00",
                     Date(),
                     Date(),
                     status = 0.0,
-                    "#ffffb3"
+                    "#ff6666"
                 )
 
-                val tProvaDeBanco = Tarefa(
-                    "Estudar Postgres",
-                    "Cap 6 da atividade",
+                val tIrnomercado = Tarefa(
+                    "Ir no supermercado",
+                    "ir na parte da tarde",
                     Date(),
                     Date(),
                     status = 0.0,
-                    "#b3ffff"
+                    "#ff6666"
                 )
 
-                var minhaListaDeTarefas = listOf<Tarefa>(tProvaDeCalculo, tProvaDeKotlin, tProvaDeBanco)
+                var minhaListaDeTarefas = listOf<Tarefa>(tProvaDeCalculo, tPassearcomcachorro, tIrnomercado)
                 MyTaskWidgetList(minhaListaDeTarefas)
 
             }
@@ -147,7 +147,7 @@ fun MainScreenContent() {
 
             BottomAppBar(
                 content = {Text("BottomBar")},
-                backgroundColor = Color(0xFF0099ff )
+                backgroundColor = Color(0xFFac3939 )
             )
 
 
@@ -159,12 +159,14 @@ fun MainScreenContent() {
             icon = {
                 Icon(
                     imageVector = Icons.Default.AddCircle,
-                    contentDescription = "Add Task"
+                    contentDescription = "Add Task",
+                    tint = Color(0xFFeeeeeeeee)
                 )
             },
 
-            text = { Text(text = "ADD")},
+            text = { Text(text = "ADD", color = Color(0xFFFeeeeeee))},
             onClick = {},
+            backgroundColor = Color(0xFFac3939)
         )}
 
     )
@@ -189,7 +191,7 @@ fun MySearchField(modificador: Modifier){
             Icon(
                 imageVector = Icons.Default.Search,
                 contentDescription = "Search Icon",
-                tint = Color(0xFF00e6e6),
+                tint = Color(0xFF000000),
             )
         }
     )
@@ -206,7 +208,7 @@ fun MyTaskWidget(
 
             Icon(
                 imageVector = Icons.Default.Notifications,
-                tint = Color(0xFFffff33),
+                tint = Color(0xFF000000),
                 contentDescription = "Icons  of a pendent taks"
             )
 
@@ -228,7 +230,7 @@ fun MyTaskWidget(
             Text(
                 text = tarefaASerMostrada.nome,
                 fontSize = 12.sp,
-                color = Color(0xFF3385ff),
+                color = Color(0xFFeeeeeee),
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic
             )
@@ -239,7 +241,7 @@ fun MyTaskWidget(
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
-                color = Color(0xFFdd99ff)
+                color = Color(0xFFeeeeeee)
             )
 
         }
